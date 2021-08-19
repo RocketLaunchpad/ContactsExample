@@ -47,6 +47,15 @@
         }
       },
       {
+        "package": "SwiftUIEx",
+        "repositoryURL": "https://github.com/RocketLaunchpad/SwiftUIEx",
+        "state": {
+          "branch": "main",
+          "revision": "1d2e3854f2722d4375463bf16d7dc8aecb4e6b3a",
+          "version": null
+        }
+      },
+      {
         "package": "UIKitEx",
         "repositoryURL": "https://github.com/RocketLaunchpad/UIKitEx.git",
         "state": {

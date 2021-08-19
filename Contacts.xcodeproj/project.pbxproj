@@ -48,7 +48,6 @@
 		096CDB5A26B6E8D8005D0EFE /* ContactActionUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactActionUI.swift; sourceTree = "<group>"; };
 		096CDB5D26B6F027005D0EFE /* ContactDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetails.swift; sourceTree = "<group>"; };
 		096CDB5F26B6F031005D0EFE /* ContactDetailsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsUI.swift; sourceTree = "<group>"; };
-		09E2A89026CDEF350039E50D /* SwiftUIEx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIEx; path = ../SwiftUIEx; sourceTree = "<group>"; };
 		09ECAAB126B7104700104558 /* ContactsFlowUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFlowUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +70,6 @@
 		093097E425F479AB00EF79CC = {
 			isa = PBXGroup;
 			children = (
-				09E2A89026CDEF350039E50D /* SwiftUIEx */,
 				093097EF25F479AB00EF79CC /* Contacts */,
 				093097EE25F479AB00EF79CC /* Products */,
 			);
