@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIEx
 
 struct ContactFormView: View {
     @ObservedObject var store: ContactForm.Store

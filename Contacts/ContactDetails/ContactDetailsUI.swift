@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIEx
 
 struct ContactDetailsView: View {
     @ObservedObject var store: ContactDetails.Store

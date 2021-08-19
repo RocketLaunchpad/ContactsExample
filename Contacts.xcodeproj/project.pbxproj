@@ -18,18 +18,15 @@
 		0930983425F483E300EF79CC /* FindContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930983325F483E300EF79CC /* FindContact.swift */; };
 		0930983725F483ED00EF79CC /* FindContactUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930983625F483ED00EF79CC /* FindContactUI.swift */; };
 		0930984B25F5771B00EF79CC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930984A25F5771B00EF79CC /* Contact.swift */; };
+		0949BAD526CDEFB800002A5C /* SwiftUIEx in Frameworks */ = {isa = PBXBuildFile; productRef = 0949BAD426CDEFB800002A5C /* SwiftUIEx */; };
 		096CDB5926B6E8CE005D0EFE /* ContactAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CDB5826B6E8CE005D0EFE /* ContactAction.swift */; };
 		096CDB5B26B6E8D8005D0EFE /* ContactActionUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CDB5A26B6E8D8005D0EFE /* ContactActionUI.swift */; };
 		096CDB5E26B6F027005D0EFE /* ContactDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CDB5D26B6F027005D0EFE /* ContactDetails.swift */; };
 		096CDB6026B6F031005D0EFE /* ContactDetailsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CDB5F26B6F031005D0EFE /* ContactDetailsUI.swift */; };
-		09DFA28626BAEB6C00B0EAE5 /* ContactsFlowUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930980125F47B4D00EF79CC /* ContactsFlowUIKit.swift */; };
-		09DFA28726BAEB7100B0EAE5 /* AppFlowUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECAAAD26B703A100104558 /* AppFlowUIKit.swift */; };
 		09ECAA9F26B7029000104558 /* FoundationEx in Frameworks */ = {isa = PBXBuildFile; productRef = 09ECAA9E26B7029000104558 /* FoundationEx */; };
-		09ECAAA226B702B600104558 /* UIKitEx in Frameworks */ = {isa = PBXBuildFile; productRef = 09ECAAA126B702B600104558 /* UIKitEx */; };
 		09ECAAA526B702D600104558 /* ReducerArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 09ECAAA426B702D600104558 /* ReducerArchitecture */; };
 		09ECAAA826B702F500104558 /* Functional in Frameworks */ = {isa = PBXBuildFile; productRef = 09ECAAA726B702F500104558 /* Functional */; };
 		09ECAAAB26B7031200104558 /* CombineEx in Frameworks */ = {isa = PBXBuildFile; productRef = 09ECAAAA26B7031200104558 /* CombineEx */; };
-		09ECAAB026B7047000104558 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECAAAF26B7047000104558 /* Navigation.swift */; };
 		09ECAAB226B7104700104558 /* ContactsFlowUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECAAB126B7104700104558 /* ContactsFlowUI.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +37,6 @@
 		093097F425F479AC00EF79CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		093097F725F479AC00EF79CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		093097F925F479AC00EF79CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0930980125F47B4D00EF79CC /* ContactsFlowUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFlowUIKit.swift; sourceTree = "<group>"; };
 		0930980425F47BC600EF79CC /* ActionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPicker.swift; sourceTree = "<group>"; };
 		0930982A25F47F1300EF79CC /* ActionPickerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPickerUI.swift; sourceTree = "<group>"; };
 		0930982D25F4837800EF79CC /* ContactForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactForm.swift; sourceTree = "<group>"; };
@@ -52,8 +48,7 @@
 		096CDB5A26B6E8D8005D0EFE /* ContactActionUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactActionUI.swift; sourceTree = "<group>"; };
 		096CDB5D26B6F027005D0EFE /* ContactDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetails.swift; sourceTree = "<group>"; };
 		096CDB5F26B6F031005D0EFE /* ContactDetailsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsUI.swift; sourceTree = "<group>"; };
-		09ECAAAD26B703A100104558 /* AppFlowUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlowUIKit.swift; sourceTree = "<group>"; };
-		09ECAAAF26B7047000104558 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		09E2A89026CDEF350039E50D /* SwiftUIEx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIEx; path = ../SwiftUIEx; sourceTree = "<group>"; };
 		09ECAAB126B7104700104558 /* ContactsFlowUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFlowUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,11 +57,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09ECAAA226B702B600104558 /* UIKitEx in Frameworks */,
 				09ECAAAB26B7031200104558 /* CombineEx in Frameworks */,
 				09ECAAA826B702F500104558 /* Functional in Frameworks */,
 				09ECAAA526B702D600104558 /* ReducerArchitecture in Frameworks */,
 				09ECAA9F26B7029000104558 /* FoundationEx in Frameworks */,
+				0949BAD526CDEFB800002A5C /* SwiftUIEx in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +71,7 @@
 		093097E425F479AB00EF79CC = {
 			isa = PBXGroup;
 			children = (
+				09E2A89026CDEF350039E50D /* SwiftUIEx */,
 				093097EF25F479AB00EF79CC /* Contacts */,
 				093097EE25F479AB00EF79CC /* Products */,
 			);
@@ -93,14 +89,12 @@
 			isa = PBXGroup;
 			children = (
 				0930984A25F5771B00EF79CC /* Contact.swift */,
-				0930980125F47B4D00EF79CC /* ContactsFlowUIKit.swift */,
 				09ECAAB126B7104700104558 /* ContactsFlowUI.swift */,
 				0930983925F483F600EF79CC /* ActionPicker */,
 				0930983E25F4840A00EF79CC /* FindContact */,
 				096CDB5C26B6F011005D0EFE /* ContactDetails */,
 				0930983C25F483FF00EF79CC /* ContactForm */,
 				096CDB5726B6E8B4005D0EFE /* ContactAction */,
-				09ECAAAC26B7038600104558 /* General */,
 				093097F025F479AB00EF79CC /* ContactsApp.swift */,
 				093097F225F479AB00EF79CC /* RootView.swift */,
 				093097F425F479AC00EF79CC /* Assets.xcassets */,
@@ -163,15 +157,6 @@
 			path = ContactDetails;
 			sourceTree = "<group>";
 		};
-		09ECAAAC26B7038600104558 /* General */ = {
-			isa = PBXGroup;
-			children = (
-				09ECAAAD26B703A100104558 /* AppFlowUIKit.swift */,
-				09ECAAAF26B7047000104558 /* Navigation.swift */,
-			);
-			path = General;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,10 +175,10 @@
 			name = Contacts;
 			packageProductDependencies = (
 				09ECAA9E26B7029000104558 /* FoundationEx */,
-				09ECAAA126B702B600104558 /* UIKitEx */,
 				09ECAAA426B702D600104558 /* ReducerArchitecture */,
 				09ECAAA726B702F500104558 /* Functional */,
 				09ECAAAA26B7031200104558 /* CombineEx */,
+				0949BAD426CDEFB800002A5C /* SwiftUIEx */,
 			);
 			productName = Contacts;
 			productReference = 093097ED25F479AB00EF79CC /* Contacts.app */;
@@ -228,6 +213,7 @@
 				09ECAAA326B702D600104558 /* XCRemoteSwiftPackageReference "ReducerArchitecture" */,
 				09ECAAA626B702F500104558 /* XCRemoteSwiftPackageReference "Functional" */,
 				09ECAAA926B7031200104558 /* XCRemoteSwiftPackageReference "CombineEx" */,
+				0949BAD326CDEFB800002A5C /* XCRemoteSwiftPackageReference "SwiftUIEx" */,
 			);
 			productRefGroup = 093097EE25F479AB00EF79CC /* Products */;
 			projectDirPath = "";
@@ -267,11 +253,8 @@
 				0930982E25F4837800EF79CC /* ContactForm.swift in Sources */,
 				0930983125F4838500EF79CC /* ContactFormUI.swift in Sources */,
 				09ECAAB226B7104700104558 /* ContactsFlowUI.swift in Sources */,
-				09ECAAB026B7047000104558 /* Navigation.swift in Sources */,
 				096CDB5B26B6E8D8005D0EFE /* ContactActionUI.swift in Sources */,
 				096CDB5E26B6F027005D0EFE /* ContactDetails.swift in Sources */,
-				09DFA28626BAEB6C00B0EAE5 /* ContactsFlowUIKit.swift in Sources */,
-				09DFA28726BAEB7100B0EAE5 /* AppFlowUIKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +445,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0949BAD326CDEFB800002A5C /* XCRemoteSwiftPackageReference "SwiftUIEx" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RocketLaunchpad/SwiftUIEx";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		09ECAA9D26B7029000104558 /* XCRemoteSwiftPackageReference "FoundationEx" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RocketLaunchpad/FoundationEx.git";
@@ -505,15 +496,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0949BAD426CDEFB800002A5C /* SwiftUIEx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0949BAD326CDEFB800002A5C /* XCRemoteSwiftPackageReference "SwiftUIEx" */;
+			productName = SwiftUIEx;
+		};
 		09ECAA9E26B7029000104558 /* FoundationEx */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 09ECAA9D26B7029000104558 /* XCRemoteSwiftPackageReference "FoundationEx" */;
 			productName = FoundationEx;
-		};
-		09ECAAA126B702B600104558 /* UIKitEx */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 09ECAAA026B702B600104558 /* XCRemoteSwiftPackageReference "UIKitEx" */;
-			productName = UIKitEx;
 		};
 		09ECAAA426B702D600104558 /* ReducerArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;

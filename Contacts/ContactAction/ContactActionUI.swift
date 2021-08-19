@@ -8,6 +8,7 @@
 import Combine
 import CombineEx
 import SwiftUI
+import SwiftUIEx
 
 struct ContactActionView: View {
     @ObservedObject var store: ContactAction.Store

@@ -8,6 +8,7 @@
 import Combine
 import CombineEx
 import SwiftUI
+import SwiftUIEx
 
 struct FindContactView: View {
     @ObservedObject var store: FindContact.Store

@@ -8,6 +8,7 @@
 import Combine
 import CombineEx
 import SwiftUI
+import SwiftUIEx
 
 private func delayedActionPublisher(_ f: @escaping (Contact) -> Void) -> (Contact) -> AnySingleValuePublisher<Void, Never> {
     return {
