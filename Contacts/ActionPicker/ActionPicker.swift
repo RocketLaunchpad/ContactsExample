@@ -8,16 +8,18 @@
 import Foundation
 import ReducerArchitecture
 
-enum ActionPicker: Namespace {
+enum ActionPicker: StoreNamespace {
     enum Value: Hashable {
         case findContact
         case addContact
     }
 
-    class Store: StateStore<Never, State, Never, Never, Value> {}
-    typealias Reducer = Store.Reducer
+    typealias StoreEnvironment = Never
+    typealias MutatingAction = Never
+    typealias EffectAction = Never
+    typealias PublishedValue = Value
 
-    struct State {
+    struct StoreState {
     }
 }
 

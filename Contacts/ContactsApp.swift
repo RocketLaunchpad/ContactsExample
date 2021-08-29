@@ -6,6 +6,10 @@
 //
 
 import SwiftUI
+import SwiftUIEx
+import ReducerArchitecture
+
+extension StoreUI: NavigationItemContent {}
 
 @main
 struct ContactsApp: App {

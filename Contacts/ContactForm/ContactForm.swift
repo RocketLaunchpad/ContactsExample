@@ -9,9 +9,10 @@ import Foundation
 import Combine
 import ReducerArchitecture
 
-enum ContactForm : Namespace {
-    class Store: StateStore<Never, State, MutatingAction, Never, Contact> {}
-    typealias Reducer = Store.Reducer
+enum ContactForm: StoreNamespace {
+    typealias StoreEnvironment = Never
+    typealias EffectAction = Never
+    typealias PublishedValue = Contact
 
     enum MutatingAction {
         case updateFirstName(String)
@@ -19,7 +20,7 @@ enum ContactForm : Namespace {
         case updatePhone(String)
     }
 
-    struct State {
+    struct StoreState {
         var contact: Contact?
         let isNew: Bool
         var isValid: Bool

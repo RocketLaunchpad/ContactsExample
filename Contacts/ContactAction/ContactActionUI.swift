@@ -9,28 +9,26 @@ import Combine
 import CombineEx
 import SwiftUI
 import SwiftUIEx
+import ReducerArchitecture
 
-struct ContactActionView: View {
-    @ObservedObject var store: ContactAction.Store
+extension ContactAction: StoreUIWrapper {
+    struct ContentView: StoreContentView {
+        typealias StoreWrapper = ContactAction
+        @ObservedObject var store: ContactAction.Store
 
-    var body: some View {
-        VStack(spacing: 25) {
-            Text(store.state.progressMessage)
-            Button("Start Over") {
-                store.publish(())
+        var body: some View {
+            VStack(spacing: 25) {
+                Text(store.state.progressMessage)
+                Button("Start Over") {
+                    store.publish(())
+                }
+                .disabled(!store.state.done)
             }
-            .disabled(!store.state.done)
+            .onAppear {
+                store.send(.effect(.perform))
+            }
+            .navigationBarHidden(true)
         }
-        .onAppear {
-            store.send(.effect(.perform))
-        }
-        .navigationBarHidden(true)
-    }
-}
-
-extension ContactAction.Store: NavigationItemContent {
-    func makeView() -> some View {
-        ContactActionView(store: self)
     }
 }
 
@@ -54,7 +52,7 @@ struct ContactActionUI_Previews: PreviewProvider {
     }
 
     static var previews: some View {
-        ContactActionView(store: testStore())
+        ContactAction.ContentView(store: testStore())
             .previewDevice("iPhone 12 Pro")
     }
 }

@@ -7,16 +7,18 @@
 
 import ReducerArchitecture
 
-enum ContactDetails : Namespace {
+enum ContactDetails: StoreNamespace {
     enum Action: Hashable {
         case edit(Contact)
         case delete(Contact)
     }
 
-    class Store: StateStore<Never, State, Never, Never, Action> {}
-    typealias Reducer = Store.Reducer
+    typealias StoreEnvironment = Never
+    typealias MutatingAction = Never
+    typealias EffectAction = Never
+    typealias PublishedValue = Action
 
-    struct State {
+    struct StoreState {
         let contact: Contact
     }
 }

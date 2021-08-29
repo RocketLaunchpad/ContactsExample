@@ -9,11 +9,10 @@ import Foundation
 import CombineEx
 import ReducerArchitecture
 
-enum FindContact : Namespace {
-    class Store: StateStore<Environment, State, MutatingAction, EffectAction, Contact> {}
-    typealias Reducer = Store.Reducer
+enum FindContact: StoreNamespace {
+    typealias PublishedValue = Contact
 
-    struct Environment {
+    struct StoreEnvironment {
         var findContacts: (String) -> AnySingleValuePublisher<[Contact], Never>
      }
 
@@ -26,14 +25,14 @@ enum FindContact : Namespace {
         case findContacts
     }
 
-    struct State {
+    struct StoreState {
         var nameInput = ""
         var matches: [Contact] = []
     }
 }
 
 extension FindContact {
-    static func store(env: Environment) -> Store {
+    static func store(env: StoreEnvironment) -> Store {
         let store = Store(identifier, .init(), reducer: reducer)
         store.environment = env
         return store

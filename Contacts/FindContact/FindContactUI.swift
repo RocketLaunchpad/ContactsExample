@@ -9,43 +9,41 @@ import Combine
 import CombineEx
 import SwiftUI
 import SwiftUIEx
+import ReducerArchitecture
 
-struct FindContactView: View {
-    @ObservedObject var store: FindContact.Store
+extension FindContact: StoreUIWrapper {
+    struct ContentView: StoreContentView {
+        typealias StoreWrapper = FindContact
+        @ObservedObject var store: FindContact.Store
 
-    var body: some View {
-        VStack {
-            HStack {
-                Image(systemName: "magnifyingglass")
-                TextField(
-                    "First or Last Name",
-                    text: store.binding(\.nameInput, { .updateInput($0) })
-                )
-            }
-            .padding(EdgeInsets(top: 15, leading: 15, bottom: 10, trailing: 15))
-            Divider()
-            List(store.state.matches) { contact in
-                Button(action: { store.publish(contact) }) {
-                    HStack {
-                        Text("\(contact.firstName) \(contact.lastName)")
-                        Spacer()
-                        Image(systemName: "chevron.forward")
+        var body: some View {
+            VStack {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                    TextField(
+                        "First or Last Name",
+                        text: store.binding(\.nameInput, { .updateInput($0) })
+                    )
+                }
+                .padding(EdgeInsets(top: 15, leading: 15, bottom: 10, trailing: 15))
+                Divider()
+                List(store.state.matches) { contact in
+                    Button(action: { store.publish(contact) }) {
+                        HStack {
+                            Text("\(contact.firstName) \(contact.lastName)")
+                            Spacer()
+                            Image(systemName: "chevron.forward")
+                        }
                     }
                 }
+                .listStyle(PlainListStyle())
             }
-            .listStyle(PlainListStyle())
+            .navigationTitle("Find Contact")
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                store.send(.mutating(.updateInput(store.state.nameInput)))
+            }
         }
-        .navigationTitle("Find Contact")
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            store.send(.mutating(.updateInput(store.state.nameInput)))
-        }
-    }
-}
-
-extension FindContact.Store: NavigationItemContent {
-    func makeView() -> some View {
-        FindContactView(store: self)
     }
 }
 
@@ -61,7 +59,7 @@ struct FindContactUI_Previews: PreviewProvider {
 
     static var previews: some View {
         NavigationView {
-            FindContactView(store: FindContact.store(env: .init(findContacts: findContacts)))
+            FindContact.ContentView(store: FindContact.store(env: .init(findContacts: findContacts)))
         }
         .previewDevice("iPhone 12 Pro")
     }

@@ -9,6 +9,7 @@ import Combine
 import CombineEx
 import SwiftUI
 import SwiftUIEx
+import ReducerArchitecture
 
 private func delayedActionPublisher(_ f: @escaping (Contact) -> Void) -> (Contact) -> AnySingleValuePublisher<Void, Never> {
     return {
@@ -19,44 +20,45 @@ private func delayedActionPublisher(_ f: @escaping (Contact) -> Void) -> (Contac
     }
 }
 
-private let contactActionEnv: ContactAction.Environment = .init(
+private let contactActionEnv: ContactAction.StoreEnvironment = .init(
     saveContact: delayedActionPublisher(Contact.save),
     deleteContact: delayedActionPublisher(Contact.delete)
 )
 
 struct ContactsFlowView: View {
-    func pickAction() -> ActionPicker.Store {
-        ActionPicker.store()
+    func pickAction() -> StoreUI<ActionPicker>  {
+        .init(ActionPicker.store())
     }
 
-    func makeContact() -> ContactForm.Store {
-        ContactForm.store(contact: nil)
+    func makeContact() -> StoreUI<ContactForm> {
+        .init(ContactForm.store(contact: nil))
     }
 
-    func saveContact(_ contact: Contact) -> ContactAction.Store {
-        ContactAction.store(contact: contact, action: .save, env: contactActionEnv)
+    func saveContact(_ contact: Contact) -> StoreUI<ContactAction> {
+        .init(ContactAction.store(contact: contact, action: .save, env: contactActionEnv))
     }
 
-    func findContact() -> FindContact.Store {
-        FindContact.store(
+    func findContact() -> StoreUI<FindContact> {
+        let store = FindContact.store(
             env: .init(
                 findContacts: { text in
                     Just(Contact.find(prefix: text)).eraseType()
                 }
             )
         )
+        return .init(store)
     }
 
-    func contactDetails(_ contact: Contact) -> ContactDetails.Store {
-        ContactDetails.store(contact)
+    func contactDetails(_ contact: Contact) -> StoreUI<ContactDetails> {
+        .init(ContactDetails.store(contact))
     }
 
-    func editContact(_ contact: Contact?) -> ContactForm.Store {
-        ContactForm.store(contact: contact)
+    func editContact(_ contact: Contact?) -> StoreUI<ContactForm> {
+        .init(ContactForm.store(contact: contact))
     }
 
-    func deleteContact(_ contact: Contact) -> ContactAction.Store {
-        ContactAction.store(contact: contact, action: .delete, env: contactActionEnv)
+    func deleteContact(_ contact: Contact) -> StoreUI<ContactAction> {
+        .init(ContactAction.store(contact: contact, action: .delete, env: contactActionEnv))
     }
 
     var body: some View {

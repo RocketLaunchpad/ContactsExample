@@ -9,16 +9,15 @@ import Foundation
 import CombineEx
 import ReducerArchitecture
 
-enum ContactAction: Namespace {
+enum ContactAction: StoreNamespace {
     enum Action {
         case save
         case delete
     }
 
-    class Store: StateStore<Environment, State, MutatingAction, EffectAction, Void> {}
-    typealias Reducer = Store.Reducer
+    typealias PublishedValue = Void
 
-    struct Environment {
+    struct StoreEnvironment {
         var saveContact: (Contact) -> AnySingleValuePublisher<Void, Never>
         var deleteContact: (Contact) -> AnySingleValuePublisher<Void, Never>
     }
@@ -31,7 +30,7 @@ enum ContactAction: Namespace {
         case perform
     }
 
-    struct State {
+    struct StoreState {
         let contact: Contact
         let action: Action
         var done = false
@@ -51,7 +50,7 @@ enum ContactAction: Namespace {
 }
 
 extension ContactAction {
-    static func store(contact: Contact, action: Action, env: Environment) -> Store {
+    static func store(contact: Contact, action: Action, env: StoreEnvironment) -> Store {
         let store = Store(identifier, .init(contact: contact, action: action), reducer: reducer)
         store.environment = env
         return store
