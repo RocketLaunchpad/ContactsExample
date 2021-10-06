@@ -51,9 +51,7 @@ enum ContactAction: StoreNamespace {
 
 extension ContactAction {
     static func store(contact: Contact, action: Action, env: StoreEnvironment) -> Store {
-        let store = Store(identifier, .init(contact: contact, action: action), reducer: reducer)
-        store.environment = env
-        return store
+        Store(identifier, .init(contact: contact, action: action), reducer: reducer, env: env)
     }
 
     static let reducer = Reducer(
@@ -66,11 +64,6 @@ extension ContactAction {
             return nil
         },
         effect: { env, state, action in
-            guard let env = env else {
-                assertionFailure()
-                return Reducer.effect(.noAction)
-            }
-
             switch action {
             case .perform:
                 let envAction: (Contact) -> AnySingleValuePublisher<Void, Never>

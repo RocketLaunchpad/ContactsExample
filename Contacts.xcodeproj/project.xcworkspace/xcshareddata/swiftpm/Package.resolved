@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/RocketLaunchpad/FoundationEx.git",
         "state": {
           "branch": "main",
-          "revision": "7e7b3391797c9a928d6e0a036814827ef944cda5",
+          "revision": "73c1812188f467ac4aed8ffa55adf21a2f2c4198",
           "version": null
         }
       },
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/RocketLaunchpad/ReducerArchitecture.git",
         "state": {
           "branch": "master",
-          "revision": "00af8ab0aef06def13971cbbcbe881d59454ee10",
+          "revision": "fe428013e91276fc2ac730e7358eaed1e91db336",
           "version": null
         }
       },
@@ -51,7 +51,7 @@
         "repositoryURL": "https://github.com/RocketLaunchpad/SwiftUIEx",
         "state": {
           "branch": "main",
-          "revision": "30bc4a54067a10e1da4356f5f7029eaf2adb7bf3",
+          "revision": "c1694602dbfdee5408b2fb21398238daa1e92052",
           "version": null
         }
       },

@@ -33,9 +33,7 @@ enum FindContact: StoreNamespace {
 
 extension FindContact {
     static func store(env: StoreEnvironment) -> Store {
-        let store = Store(identifier, .init(), reducer: reducer)
-        store.environment = env
-        return store
+        Store(identifier, .init(), reducer: reducer, env: env)
     }
 
     static let reducer = Reducer(
@@ -51,11 +49,6 @@ extension FindContact {
             }
         },
         effect: { env, state, action in
-            guard let env = env else {
-                assertionFailure()
-                return Reducer.effect(.noAction)
-            }
-
             switch action {
             case .findContacts:
                 return env.findContacts(state.nameInput)
