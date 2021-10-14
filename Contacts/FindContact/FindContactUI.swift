@@ -41,7 +41,7 @@ extension FindContact: StoreUIWrapper {
             .navigationTitle("Find Contact")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
-                store.send(.mutating(.updateInput(store.state.nameInput)))
+                store.send(.effect(.findContacts))
             }
         }
     }
